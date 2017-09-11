@@ -18,6 +18,7 @@
   "homepage": "https://github.com/halbae76/my_app#readme",
   "dependencies": {
     "ejs": "^2.5.7",
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "mongoose": "^4.11.11"
   }
 }
