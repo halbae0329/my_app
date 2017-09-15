@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body>
+    <header>
+      <% include ../partials/header %>
+    </header>
+
+    <div class="users">
+      <div class="new">
+        <h3>Sign Up</h3>
+        <form id="create_user" class="users_form" action="/users" method="post">
+          <label>Email*
+            <span id="email_error" class="error_message"><%= emailError ? emailError : "" %></span>
+          </label>
+          <input id="email" type="text" name="user[email]" value="<%= formData ? formData.email : "" %>">
+          <label>Nickname*
+            <span id="nickname_error" class="error_message"><%= nicknameError ? nicknameError : "" %></span>
+          </label>
+          <input id="nickname" type="text" name="user[nickname]" value="<%= formData ? formData.nickname : "" %>">
+          <label>Password*
+            <span id="password_error" class="error_message"><%= passwordError ? passwordError : "" %></span>
+          </label>
+          <input id="password" type="password" name="user[password]" value="">
+          <label>Password Confirmation*
+            <span id="password_confirmation_error" class="error_message"></span>
+          </label>
+          <input id="password_confirmation" type="password" name="user[passwordConfirmation]" value="">
+          <p><small>*Required</small></p>
+
+          <input class="submit_btn" type="botton" value="Submit">
+        </form>
+        <a href="javascript:history.back()">
+          <button type="button">Back</button>
+        </a>
+      </div>
+    </div>
+
+    <footer>
+      <% include ../partials/footer %>
+    </footer>
+  </body>
+</html>
